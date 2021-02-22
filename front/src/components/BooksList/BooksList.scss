@@ -1,0 +1,20 @@
+.books-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__loading,
+  &__error {
+    font-weight: 600;
+  }
+
+  &__loading {
+    font-size: 2rem;
+  }
+
+  &__error {
+    font-size: 1.6rem;
+    color: red;
+  }
+}

@@ -1,0 +1,17 @@
+.books-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15rem auto;
+
+  &__loading,
+  &__error {
+    font-size: 2rem;
+    padding: 4rem;
+  }
+
+  &__error {
+    font-weight: 600;
+    color: red;
+  }
+}
