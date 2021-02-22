@@ -1,0 +1,42 @@
+.form {
+  max-width: 40rem;
+  box-shadow: 1px 1px 15px #ddd;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  &__info {
+    font-size: 2rem;
+    color: #11d445;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__group {
+    padding: 1.5rem 0;
+
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    background: #ddd;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+
+  &__error {
+    color: red;
+    padding-top: 1rem;
+  }
+}

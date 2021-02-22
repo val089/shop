@@ -9,6 +9,11 @@ const CartSummary = ({ cart }) => {
     const [totalPrice, setTotalPrice] = useState(0);
     const [isCartEmpty, setIsCartEmpty] = useState(false);
 
+    const convertedPrice = (price) => {
+        const newPrice = price/100;
+        return newPrice.toFixed(2);
+    };
+
     useEffect(() => {
         let price = 0;
         cart.map(item => {
@@ -33,7 +38,7 @@ const CartSummary = ({ cart }) => {
                 <Link to="/">
                     <Button label="WRÓĆ DO SKLEPU" />
                 </Link>
-                <p className="cart-summary__total">SUMA: <span className="cart-summary__total-price">{totalPrice}</span> PLN</p>
+                <p className="cart-summary__total">SUMA: <span className="cart-summary__total-price">{convertedPrice(totalPrice)}</span> PLN</p>
                 <Link to="/summary">
                     { isCartEmpty && <Button label="DALEJ" />}
                 </Link>

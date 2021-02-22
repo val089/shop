@@ -1,15 +1,24 @@
+@import "breakpoints.scss";
+@import "mixins.scss";
+
 .subcart {
   position: absolute;
   display: none;
   flex-direction: column;
   text-align: center;
   box-shadow: 1px 1px 10px #ddd;
-  right: 0;
+  right: 2rem;
   top: 4rem;
   background: #fff;
   border-radius: 1rem;
-  width: 50rem;
+  width: 30rem;
   cursor: default;
+  @include mq(smartphone) {
+    width: 40rem;
+  }
+  @include mq(smartphone-large) {
+    width: 50rem;
+  }
 
   &__header {
     width: 100%;
@@ -48,10 +57,16 @@
   }
 
   &__total {
-    font-size: 1.4rem;
+    font-size: 1rem;
+    @include mq(smartphone) {
+      font-size: 1.4rem;
+    }
   }
 
   &__total-price {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    @include mq(smartphone) {
+      font-size: 1.8rem;
+    }
   }
 }

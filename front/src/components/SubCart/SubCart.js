@@ -7,6 +7,11 @@ import SubCartItem from '../SubCartItem';
 function SubCart({ data }) {
     const [totalPrice, setTotalPrice] = useState(0);
 
+    const convertedPrice = (price) => {
+        const newPrice = price/100;
+        return newPrice.toFixed(2);
+    };
+
     useEffect(() => {
         let price = 0;
 
@@ -27,7 +32,7 @@ function SubCart({ data }) {
                 {data.map(item => <SubCartItem key={item.id} item={item} />)}
             </main>
             <footer className="subcart__footer">
-                <p className="subcart__total">SUMA: <span className="subcart__total-price">{totalPrice}</span> PLN</p>
+                <p className="subcart__total">SUMA: <span className="subcart__total-price">{convertedPrice(totalPrice)}</span> PLN</p>
                 <Link to="/cart">
                     <Button label="PRZEJDŹ DO KOSZYKA" />
                 </Link>

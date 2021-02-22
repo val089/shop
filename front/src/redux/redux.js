@@ -15,9 +15,9 @@ export const fetchBooks = () => {
       .then(({ data }) => {
         dispatch(fetchSucceeded(data.data));
       })
-        .catch(error => {
-          dispatch(fetchFailed(error));
-        });
+      .catch(error => {
+        dispatch(fetchFailed(error));
+      });
     };
 };
 

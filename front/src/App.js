@@ -7,6 +7,7 @@ import {
 import Header from './components/Header';
 import Books from './components/containers/Books';
 import CartSummary from './pages/CartSummary';
+import Summary from './pages/Summary';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/cart">
               <CartSummary />
+            </Route>
+            <Route path="/summary">
+              <Summary />
             </Route>
           </Switch>
       </Router>

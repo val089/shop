@@ -1,0 +1,24 @@
+.summary {
+  margin: 14rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__total {
+    background: #ddd;
+    height: 10rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 15px #ddd;
+    margin-bottom: 4rem;
+  }
+
+  &__total-price {
+    font-size: 2rem;
+    padding: 2rem 4rem;
+  }
+}

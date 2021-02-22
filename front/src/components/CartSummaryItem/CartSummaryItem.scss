@@ -1,3 +1,6 @@
+@import "breakpoints.scss";
+@import "mixins.scss";
+
 .cart-summary-item {
   width: 100%;
   display: flex;
@@ -13,6 +16,10 @@
   &__title {
     font-size: 1.6rem;
     padding: 0 1rem;
+    display: none;
+    @include mq(smartphone) {
+      width: 40rem;
+    }
   }
 
   &__quantity,
