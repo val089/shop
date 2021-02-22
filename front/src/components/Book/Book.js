@@ -1,8 +1,12 @@
 import React from 'react';
 import './Book.scss';
 import PropTypes from 'prop-types';
+import Button from '../Button';
 
-const Book = ({ data }) => {
+import { connect } from 'react-redux';
+import { addToCart } from '../../redux/redux';
+
+const Book = ({ data, addToCart }) => {
     return(
         <div className="book">
             <div className="book__img-container">
@@ -14,6 +18,7 @@ const Book = ({ data }) => {
             <div className="book__price-container">
                 <p className="book__price">{data.price} {data.currency}</p>
             </div>
+            <Button onClick={() => addToCart(data.id)} label="DODAJ DO KOSZYKA" />
         </div>
     );
 };
@@ -29,4 +34,8 @@ Book.propTypes = {
     })
   };
 
-export default Book;
+  const mapDispatchToProps = {
+    addToCart
+};
+
+  export default connect(null, mapDispatchToProps)(Book);
