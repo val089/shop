@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchBooks } from './redux';
+import { fetchBooks } from '../../../redux/redux';
 import './Books.scss';
 import BooksList from '../../BooksList';
 
@@ -29,9 +29,9 @@ const Books = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        books: state.books.books,
-        isLoading: state.books.isLoading,
-        isError: state.books.isError
+        books: state.shop.books,
+        isLoading: state.shop.isLoading,
+        isError: state.shop.isError
     };
 };
 

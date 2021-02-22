@@ -1,0 +1,13 @@
+@import "colors.scss";
+
+.button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background: $btn-bg-color;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 1px 1px 15px #ddd;
+  cursor: pointer;
+  outline: none;
+}
