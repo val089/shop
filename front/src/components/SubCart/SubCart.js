@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './SubCart.scss';
-
+import Button from '../Button';
 import SubCartItem from '../SubCartItem';
 
 function SubCart({ data }) {
@@ -27,6 +28,9 @@ function SubCart({ data }) {
             </main>
             <footer className="subcart__footer">
                 <p className="subcart__total">SUMA: <span className="subcart__total-price">{totalPrice}</span> PLN</p>
+                <Link to="/cart">
+                    <Button label="PRZEJDŹ DO KOSZYKA" />
+                </Link>
             </footer>
         </div>
     );

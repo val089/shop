@@ -11,6 +11,7 @@
   background: #fff;
   outline: none;
   position: relative;
+  padding-right: 2rem;
 
   &:hover .subcart {
     display: block;
@@ -28,8 +29,8 @@
     border-radius: 50%;
     color: #fff;
     position: absolute;
-    right: -1rem;
-    top: -1.2rem;
+    right: 1rem;
+    top: -1rem;
     background: $cart-counter-bg-color;
     width: 3rem;
     height: 3rem;
