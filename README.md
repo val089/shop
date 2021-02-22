@@ -1,6 +1,6 @@
-# Book Shop
+# Shop
 
-Book Shop is a program which shows shopping process. Example of products are books fetched from API created by Gdańskie Wydawnictwo Oświatowe.
+Shop is a program which shows shopping process. Example of products are books fetched from API created by Gdańskie Wydawnictwo Oświatowe.
 Next step is possibility adding products to the cart and delete them from it. For the end of order we fill the form. After submit in the console we should see our order with status 201 which meaning success ;).
 
 ## API Documentation
