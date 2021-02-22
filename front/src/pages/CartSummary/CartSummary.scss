@@ -1,3 +1,6 @@
+@import "breakpoints.scss";
+@import "mixins.scss";
+
 .cart-summary {
   display: flex;
   flex-direction: column;
@@ -42,11 +45,17 @@
   }
 
   &__total {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    @include mq(smartphone) {
+      font-size: 1.6rem;
+    }
   }
 
   &__total-price {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: bold;
+    @include mq(smartphone) {
+      font-size: 2rem;
+    }
   }
 }

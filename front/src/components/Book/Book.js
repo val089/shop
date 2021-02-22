@@ -7,6 +7,12 @@ import { connect } from 'react-redux';
 import { addToCart } from '../../redux/redux';
 
 const Book = ({ data, addToCart }) => {
+
+    const convertedPrice = (price) => {
+        const newPrice = price/100;
+        return newPrice.toFixed(2);
+    };
+
     return(
         <div className="book">
             <div className="book__img-container">
@@ -16,7 +22,7 @@ const Book = ({ data, addToCart }) => {
             <h2 className="book__title">{data.title}</h2>
             <p className="book__author">{data.author}</p>
             <div className="book__price-container">
-                <p className="book__price">{data.price} {data.currency}</p>
+                <p className="book__price">{convertedPrice(data.price)} {data.currency}</p>
             </div>
             <Button onClick={() => addToCart(data.id)} label="DODAJ DO KOSZYKA" />
         </div>

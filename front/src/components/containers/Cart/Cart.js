@@ -7,10 +7,15 @@ import { connect } from 'react-redux';
 import SubCart from '../../SubCart';
 
 function Cart({ cart }) {
+
+    const style = {
+        display: cart.length > 0 ? 'flex' : 'none'
+    };
+
     return(
         <div className="cart">
             <FontAwesomeIcon icon={faShoppingCart} className="cart__icon" />
-            <span className="cart__counter">{cart.length}</span>
+            <span className="cart__counter" style={style}>{cart.length}</span>
             <SubCart data={cart} />
         </div>
     );

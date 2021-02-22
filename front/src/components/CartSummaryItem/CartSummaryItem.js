@@ -9,6 +9,11 @@ const CartSummaryItem = ({ item, removeFromCart }) => {
 
     const MAX_TEXT_LENGTH = 20;
 
+    const convertedPrice = (price) => {
+        const newPrice = price/100;
+        return newPrice.toFixed(2);
+    };
+
     return(
         <div className="cart-summary-item">
             <img className="cart-summary-item__img" src={item.cover_url} alt="book cover" />
@@ -16,7 +21,7 @@ const CartSummaryItem = ({ item, removeFromCart }) => {
                 {`${item.title.slice(0, MAX_TEXT_LENGTH)}...`}
             </h4>
             <p className="cart-summary-item__quantity">x {item.qty} </p>
-            <p className="cart-summary-item__price">{item.price} {item.currency}</p>
+            <p className="cart-summary-item__price">{convertedPrice(item.price)} {item.currency}</p>
             <Button label="USUŃ" onClick={() => removeFromCart(item.id)} />
         </div>
     );
