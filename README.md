@@ -1,47 +1,34 @@
-# Zadanie rekrutacyjne
-Zadanie rekrutacyjne polega na napisaniu programu, który ma przedstawiać proces
- zakupowy książek (pobieranie danych o książkach z API, dodawanie i usuwanie
- produktów z koszyka, wypełnienie formularza danymi osobowymi potrzebnymi do
- realizacji zamówienia).
+# Book Shop
 
-Rozwiązanie zadania należy umieścić w folderze _front_.
-### Aplikacja powinna składać się z 3 podstron:
-#### 1. Strona główna
-###### Lista funkcjonalności składająca się z:
-* pobieranie danych z API po wejściu na stronę aplikacji (**GET** _/book_),
-* wyświetlenie wcześniej pobranych danych w konkretnym formacie, tj. każdą
- książkę powinien przedstawiać jeden blok, który ma w sobie zawierać okładkę
- książki, jej tytuł, autora, liczbę stron oraz przycisk:
-    * `DODAJ DO KOSZYKA`, który będzie dodawał konkretną pozycję do koszyka.
-* przycisk, który umożliwia przejście do koszyka.
-#### 2. Strona prezentująca koszyk
-###### Lista funkcjonalności składająca się z:
-* wyświetlanie listy wybranych przez użytkownika książek,
-* przycisk `DALEJ`, który będzie kierował do etapu podsumowania zamówienia.
-##### 3. Strona zawierająca formularz potrzebny do złożenia zamówienia
-###### Lista funkcjonalności składająca z:
-* przygotowanie formularza z polami:
-    * imię,
-    * nazwisko,
-    * miejscowość,
-    * kod pocztowy.
-* przycisk `ZAMAWIAM I PŁACĘ` po naciśnięciu którego zostaną wysłane dane pod
- endpoint **POST** _/order_.
-###### Funkcjonalności dodatkowe:
-* walidacja formularza.
-### Spis **wymaganych** technologii przy pracy z zadaniem
-* react,
-* dowolna biblioteka do zarządania stanem np. redux.
+Book Shop is a program which shows shopping process. Example of products are books fetched from API created by Gdańskie Wydawnictwo Oświatowe.
+Next step is possibility adding products to the cart and delete them from it. For the end of order we fill the form. After submit in the console we should see our order with status 201 which meaning success ;).
 
-## Dokumentacja API
-Dokumentacja w formacie OpenAPI 3 dostępna jest po uruchomieniu mock serwera
- i przejściu na adres: [localhost:3001/docs](http://localhost:3001/docs).
+## API Documentation
 
-## Uruchamianie środowiska deweloperskiego
-Wymagane jest posiadanie Node.js (zaleca się dodatkowo Yarn). Projekt wymaga
- instalacji i uruchomienia API mock serwera:
-```bash
-cd api
-yarn
-yarn start
-```
+Documentation in OpenAPI format is available after when mock server is running. Direct to: http://localhost:3001/docs.
+
+### Requirements
+
+You’ll need to have **Node.js** on your local development machine.
+
+## Installation
+
+In the api and front directory:
+
+    yarn install
+    or
+    npm install
+
+### How to run (dev mode)
+
+In the api and front directory:
+
+    yarn start
+    or
+    npm start
+
+Remember that you should start first in api directory, because API data will not connected with front without it.
+
+Runs the app in the development mode.
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
