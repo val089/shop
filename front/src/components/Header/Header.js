@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Logo';
-import Cart from '../Cart';
+import Cart from '../containers/Cart';
 import './Header.scss';
 import logo from '../../images/logo.png';
 

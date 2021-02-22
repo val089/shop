@@ -1,0 +1,57 @@
+.subcart {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 1px 1px 10px #ddd;
+  right: 0;
+  top: 4rem;
+  background: #fff;
+  border-radius: 1rem;
+  width: 50rem;
+  cursor: default;
+
+  &__header {
+    width: 100%;
+    background: #ddd;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__info {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  &__products {
+    max-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ddd;
+    padding: 2rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  &__total {
+    font-size: 1.4rem;
+  }
+
+  &__total-price {
+    font-size: 1.8rem;
+  }
+}
