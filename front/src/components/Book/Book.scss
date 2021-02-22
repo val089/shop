@@ -1,0 +1,44 @@
+.book {
+  width: 300px;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  &:hover {
+    box-shadow: 1px 1px 15px #ddd;
+  }
+
+  &__img-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 150px;
+  }
+
+  &__pages,
+  &__author,
+  &__price {
+    padding: 1rem 0;
+  }
+
+  &__pages,
+  &__author {
+    font-size: 1.4rem;
+  }
+
+  &__title {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__price-container {
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+}

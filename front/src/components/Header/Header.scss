@@ -1,7 +1,9 @@
+@import "colors.scss";
 @import "mixins.scss";
 @import "breakpoints.scss";
 
 .header {
+  background: $header-bg-color;
   width: 100%;
   height: 100px;
   box-shadow: 1px 1px 15px #ddd;
