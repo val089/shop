@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../Logo';
+import Cart from '../Cart';
 import './Header.scss';
 import logo from '../../images/logo.png';
 
@@ -11,6 +12,7 @@ const Header = () => {
                     image={logo}
                     text="Shop.pl"
                 />
+                <Cart />
             </div>
         </header>
     );
